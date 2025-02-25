@@ -9,7 +9,7 @@ export default function Projects({ projects }) {
         {projects.map((project,) => (
           <div
             key={project.id}
-            className=" border rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+            className=" dark:bg-gray-800 dark:border-none shadow-md border rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
           >
             <div className="p-6">
               <p className="text-xl font-semibold mb-2">{project.name}</p>
@@ -26,19 +26,19 @@ export default function Projects({ projects }) {
                   🔄 {project.forks_count}
                 </span>
                 {project.language && (
-                  <span className="dark:text-gray-300 dark:bg-gray-600 px-2 py-1 bg-gray-100 rounded-full text-xs">
+                  <span className="  px-2 py-1 bg-yellow-400 rounded-full text-black text-xs">
                     {project.language}
                   </span>
                 )}
               </div>
 
               {/* Links */}
-              <div className="flex items-center gap-4">
+              <div className=" p-2 flex items-center justify-between gap-4">
                 <Link
                   href={project.html_url}
                  
                   rel="noopener noreferrer"
-                  className="dark:text-gray-300 flex items-center gap-2 text-sm text-gray-600 hover:text-blue-500"
+                  className="dark:text-gray-300 flex items-center gap-2 text-gray-600 hover:text-blue-500"
                 >
                   <Github className="h-4 w-4" />
                   Code
@@ -48,7 +48,7 @@ export default function Projects({ projects }) {
                     href={project.homepage}
                    
                     rel="noopener noreferrer"
-                    className="dark:text-gray-300 flex items-center gap-2 text-sm text-gray-600 hover:text-blue-500"
+                    className="dark:text-gray-300 flex items-center gap-2  text-gray-600 hover:text-blue-500"
                   >
                     <ExternalLink className="h-4 w-4" />
                     Demo
