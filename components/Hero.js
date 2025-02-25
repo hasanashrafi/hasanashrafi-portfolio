@@ -5,7 +5,7 @@ function Hero() {
  
 
   return (
-    <div className="container mx-auto px-6 pt-32 pb-12">
+    <div className="dark:bg-gray-700 container mx-auto px-6 pt-32 pb-12">
       <div className="max-w-3xl">
         <div>
           <p className="text-5xl font-bold mb-6">
@@ -13,7 +13,7 @@ function Hero() {
             <span className="ml-2 text-blue-500">Hasan Aashrafi</span>
           </p>
 
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="dark:text-gray-100 text-xl text-gray-600 mb-8">
             A passionate Frontend Developer crafting beautiful and functional web experiences.
             I specialize in React, Next.js, and modern web technologies.
           </p>
@@ -30,7 +30,7 @@ function Hero() {
               href="https://github.com/hasanashrafi"
               
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-500 transition-colors"
+              className= "dark:text-gray-400 text-gray-600 hover:text-blue-500 transition-colors"
             >
               <Github className="h-6 w-6" />
             </Link>
@@ -38,13 +38,13 @@ function Hero() {
               href="https://www.linkedin.com/in/hasan-ashrafi-7bb68bb4"
               
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-500 transition-colors"
+              className="dark:text-gray-400 text-gray-600 hover:text-blue-500 transition-colors"
             >
-              <Linkedin className="h-6 w-6" />
+              <Linkedin className=" h-6 w-6" />
             </Link>
             <Link
               href="mailto:hasanashrafi.dev@gmail.com"
-              className="text-gray-600 hover:text-blue-500 transition-colors"
+              className="dark:text-gray-400 text-gray-600 hover:text-blue-500 transition-colors"
             >
               <Mail className="h-6 w-6" />
             </Link>
