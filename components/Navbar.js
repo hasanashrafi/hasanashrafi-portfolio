@@ -20,14 +20,14 @@ export default function Navbar() {
     document.body.classList.toggle('dark');
   };
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-700 backdrop-blur-md ">
 
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className='flex items-center gap-x-4'>
             <Link
               href="/"
-              className="text-xl font-bold"
+              className="dark:text-gray-300 text-xl font-bold"
             >
               HsN.DeV
             </Link>
