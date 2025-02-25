@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, Moon, Sun, X } from 'lucide-react'
+import Image from 'next/image'
 
 const navigation = [
   { name: 'About', href: '/' },
@@ -20,18 +21,17 @@ export default function Navbar() {
     document.body.classList.toggle('dark');
   };
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-700 backdrop-blur-md ">
+    <header className="  fixed top-0 left-0 right-0  z-50 bg-white/80 dark:bg-gray-700 backdrop-blur-md ">
 
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className='flex items-center gap-x-4'>
-            <Link
-              href="/"
-              className="dark:text-gray-300 text-xl font-bold"
-            >
-              HsN.DeV
-            </Link>
-
+      <nav className="w-full   mx-auto  px-5">
+        <div className="w-full  flex items-center justify-between">
+          <div className='  flex items-center gap-x-4'>
+          <Link
+            href="/"
+            className="dark:text-gray-300 text-xl font-bold"
+          >
+            <Image width={100} height={100} src="/logo.png" className='size-20 ' />
+          </Link>
 
             <button
               className="dark-mode-button"
@@ -45,8 +45,10 @@ export default function Navbar() {
             </button>
           </div>
 
+         
+
           {/* Desktop Navigation */}
-          <div className="dark:text-gray-300 hidden md:flex gap-8">
+          <div className=" dark:text-gray-300 hidden md:flex gap-x-4 ">
             {navigation.map((item) => (
               <Link
                 key={item.name}

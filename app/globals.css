@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* .animate-typing {
+  @apply animate-typing;
+} */
+
 @layer base {
   html {
     --scroll-behavior: smooth !important;
