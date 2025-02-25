@@ -13,8 +13,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+    <html lang="en"  className=" scroll-smooth">
+      <body className={`${inter.className} `}>
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">
