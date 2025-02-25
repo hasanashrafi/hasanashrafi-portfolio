@@ -38,7 +38,7 @@ export default function Projects({ projects }) {
                   href={project.html_url}
                  
                   rel="noopener noreferrer"
-                  className="dark:text-gray-300 flex items-center gap-2 text-gray-600 hover:text-blue-500"
+                  className=" dark:text-gray-300 flex items-center gap-2 text-gray-600 dark:hover:text-blue-500 ease-in-out transition-all hover:text-blue-500"
                 >
                   <Github className="h-4 w-4" />
                   Code
@@ -48,7 +48,7 @@ export default function Projects({ projects }) {
                     href={project.homepage}
                    
                     rel="noopener noreferrer"
-                    className="dark:text-gray-300 flex items-center gap-2  text-gray-600 hover:text-blue-500"
+                    className=" dark:text-gray-300 flex items-center gap-2  text-gray-600 dark:hover:text-blue-500 ease-in-out transition-all hover:text-blue-500"
                   >
                     <ExternalLink className="h-4 w-4" />
                     Demo
