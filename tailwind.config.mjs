@@ -6,12 +6,19 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+  extend: {
+    colors: {
+      background: {
+        light: "var(--background-light)",
+        dark: "var(--background-dark)",
+      },
+      foreground: {
+        light: "var(--foreground-light)",
+        dark: "var(--foreground-dark)",
       },
     },
   },
+},
+  darkMode: "class", // or "media" (default)
   plugins: [],
 };
