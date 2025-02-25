@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, Moon, Sun, X } from 'lucide-react'
 
 const navigation = [
   { name: 'About', href: '/' },
@@ -13,17 +13,37 @@ const navigation = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [darkMode, setDarkMode] = useState(false);
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.body.classList.toggle('dark');
+  };
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
+
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link 
-            href="/" 
-            className="text-xl font-bold"
-          >
-            HsN.DeV
-          </Link>
+          <div className='flex items-center gap-x-4'>
+            <Link
+              href="/"
+              className="text-xl font-bold"
+            >
+              HsN.DeV
+            </Link>
+
+
+            <button
+              className="dark-mode-button"
+              onClick={toggleDarkMode}
+            >
+              {darkMode ? (
+                <Sun className="text-yellow-500" size={24} />
+              ) : (
+                <Moon className="text-gray-500" size={24} />
+              )}
+            </button>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8">
@@ -66,6 +86,7 @@ export default function Navbar() {
             ))}
           </div>
         )}
+
       </nav>
     </header>
   )

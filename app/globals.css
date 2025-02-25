@@ -18,3 +18,16 @@
     @apply max-w-7xl mx-auto;
   }
 }
+
+/* global.css or styles.css */
+.dark {
+  background-color: #1a1d23;
+  color: #fff;
+}
+
+.dark-mode-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
