@@ -28,7 +28,7 @@ function Hero() {
           <div className="flex items-center gap-4 ml-4">
             <Link
               href="https://github.com/hasanashrafi"
-              target="_blank"
+              
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-500 transition-colors"
             >
@@ -36,7 +36,7 @@ function Hero() {
             </Link>
             <Link
               href="https://www.linkedin.com/in/hasan-ashrafi-7bb68bb4"
-              target="_blank"
+              
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-blue-500 transition-colors"
             >

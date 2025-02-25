@@ -36,7 +36,7 @@ export default function Projects({ projects }) {
               <div className="flex items-center gap-4">
                 <Link
                   href={project.html_url}
-                  target="_blank"
+                 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-500"
                 >
@@ -46,7 +46,7 @@ export default function Projects({ projects }) {
                 {project.homepage && (
                   <Link
                     href={project.homepage}
-                    target="_blank"
+                   
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-500"
                   >
