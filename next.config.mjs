@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-   
-    experimental: {
-   
+  experimental: {
     externalDir: true,
+    appDir: true,
   },
 };
 
