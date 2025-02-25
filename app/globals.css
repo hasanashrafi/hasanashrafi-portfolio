@@ -4,10 +4,10 @@
 
 @layer base {
   html {
-    --scroll-behavior: smooth!important;
-    scroll-behavior: smooth!important;
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
   }
-  
+
   body {
     @apply bg-white text-gray-900;
   }
@@ -18,16 +18,12 @@
     @apply max-w-7xl mx-auto;
   }
 }
-
-/* global.css or styles.css */
-.dark {
-  background-color: #1a1d23;
-  color: #fff;
+/* light mode */
+.bg-background {
+  background-color: var(--background-light);
 }
 
-.dark-mode-button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+/* dark mode */
+.dark .bg-background {
+  background-color: var(--background-dark);
 }
