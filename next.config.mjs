@@ -2,7 +2,7 @@
 const nextConfig = {
    
     experimental: {
-    fontLoaders: false,
+   
     externalDir: true,
   },
 };
