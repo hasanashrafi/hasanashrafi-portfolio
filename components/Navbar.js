@@ -46,7 +46,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-8">
+          <div className="dark:text-gray-300 hidden md:flex gap-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -73,12 +73,12 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pt-4 pb-3">
+          <div className="w-full px-3 dark:bg-gray-600 md:hidden pt-4 pb-3">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-base font-medium hover:text-blue-500"
+                className="  dark:text-gray-300  block py-2 text-base font-medium hover:text-blue-500"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}

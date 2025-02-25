@@ -19,12 +19,12 @@ function Hero() {
           </p>
         </div>
         <div className="flex items-center gap-4">
-          <Link
+          <a
             href="#contact"
             className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors"
           >
             Get in Touch
-          </Link>
+          </a>
           <div className="flex items-center gap-4 ml-4">
             <Link
               href="https://github.com/hasanashrafi"
