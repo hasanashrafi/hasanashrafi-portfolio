@@ -30,7 +30,7 @@ export default function Navbar() {
             href="/"
             className="dark:text-gray-300 text-xl font-bold"
           >
-            <Image width={100} height={100} src="/logo.png" className='size-20 ' />
+            <Image priority alt='logo' width={100} height={100} src="/logo.png" className='size-20 ' />
           </Link>
 
             <button
@@ -66,9 +66,9 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="size-6" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="size-7" />
             )}
           </button>
         </div>
