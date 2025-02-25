@@ -73,7 +73,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="w-full px-3 dark:bg-gray-600 md:hidden pt-4 pb-3">
+          <div className="w-full px-3  md:hidden pt-4 pb-3">
             {navigation.map((item) => (
               <Link
                 key={item.name}
