@@ -6,7 +6,7 @@ export default function Projects({ projects }) {
     <section id="projects" className="container mx-auto px-6 py-12">
       <p className="text-3xl font-bold mb-8">Featured Projects</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => (
+        {projects.map((project,) => (
           <div
             key={project.id}
             className="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow"

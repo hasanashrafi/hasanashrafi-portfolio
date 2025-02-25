@@ -1,17 +1,19 @@
-import { FlatCompat } from '@eslint/eslintrc'
+// eslint.config.mjs
+import { FlatCompat } from "@eslint/eslintrc"
+import path from "path"
+import { fileURLToPath } from "url"
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
+  baseDirectory: __dirname,
 })
 
-const eslintConfig = [
-  ...compat.config({
-    extends: ['next'],
-    rules: {
-      'react/no-unescaped-entities': 'off',
-      '@next/next/no-page-custom-font': 'off',
-    },
-  }),
+/** @type {import('eslint').Linter.Config[]} */
+const configs = [
+  ...compat.extends("next/core-web-vitals"),
+  ...compat.extends("next/typescript"),
 ]
 
-export default eslintConfig
+export default configs

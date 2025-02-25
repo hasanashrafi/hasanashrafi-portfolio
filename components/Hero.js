@@ -9,7 +9,7 @@ function Hero() {
       <div className="max-w-3xl">
         <div>
           <p className="text-5xl font-bold mb-6">
-            Hi, I'm
+            Hi, Iam
             <span className="ml-2 text-blue-500">Hasan Aashrafi</span>
           </p>
 
