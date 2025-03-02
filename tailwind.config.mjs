@@ -32,7 +32,7 @@ export default {
             borderColor: "transparent"
           },
           "100%": {
-            borderColor: "white"
+            borderColor: "white", 
           }
         }
       },
