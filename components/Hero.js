@@ -8,7 +8,7 @@ function Hero() {
     <div className="dark:bg-gray-800 container mx-auto px-6 pt-32 pb-12">
       <div className="max-w-3xl">
         <div>
-          <p className="mb-10 dark:animate-none animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white dark:border-r-gray-800 pr-5 text-5xl text-black dark:text-gray-300 font-bold">
+          <p className="mb-10 dark:animate-none animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white dark:border-r-gray-800 pr-5 text-4xl text-black dark:text-gray-300 font-bold">
             Hi, Iam <br/>
             <span className=" text-blue-500">Hasan Aashrafi</span>
           </p>
