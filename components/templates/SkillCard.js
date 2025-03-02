@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 
-function SkillCard({skill,index}) {
+function SkillCard({skill}) {
   return (
     <div>
      <ul >

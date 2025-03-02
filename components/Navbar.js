@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Moon, Sun, X } from 'lucide-react'
+import { Moon, Sun } from 'lucide-react'
 import Image from 'next/image'
 
 
