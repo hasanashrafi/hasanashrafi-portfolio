@@ -9,7 +9,7 @@ export default async function Home() {
   const projects = await getRepositories()
 
   return (
-    <div className="dark:bg-gray-700 dark:text-gray-300 space-y-10 pb-20">
+    <div className="dark:bg-gray-800 dark:text-gray-300 space-y-10 pb-20">
       <Hero />
       <About />
       <Projects projects={projects} />
