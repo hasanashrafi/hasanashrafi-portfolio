@@ -16,8 +16,8 @@ export default function Navbar() {
   };
   return (
     <header className="  fixed top-0 left-0 right-0  z-50 bg-white/80 dark:bg-gray-800 backdrop-blur-md ">
-      <nav className="w-full mx-auto  px-5">
-        <div className="w-full flex items-center justify-between">
+      <nav className="w-full mx-auto  px-5"> 
+        <div className="w-full flex items-center justify-between max-w-7xl mx-auto">
           <Link
             href="/"
             className="dark:text-gray-300 text-xl font-bold"
