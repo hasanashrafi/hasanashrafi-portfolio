@@ -7,7 +7,7 @@ function Contact() {
     github: 'https://github.com/hasanashrafi',
     linkedin: 'https://www.linkedin.com/in/hasan-ashrafi-7bb68bb4',
     email: 'mailto:hasanashrafi.dev@gmail.com',
-    phone: "+989981444535"
+    phone: "+98 998 144 4535"
   };
 
   return (
@@ -22,7 +22,7 @@ function Contact() {
             {key === 'phone' && (
               <div className='group flex relative'>
                 <Phone className='size-8 ' />
-                <span className="group-hover:opacity-100 transition-opacity  bg-sky-500 w-fit p-1 text-sm text-white rounded-md absolute left-full -right-full -translate-x-1/6 -translate-y-full opacity-0 m-4 mx-auto">
+                <span className="group-hover:opacity-100 transition-opacity  bg-sky-400 w-max p-1 text-sm text-white rounded-md absolute -left-full  translate-x-1/6 translate-y-full opacity-0 m-4 mx-auto">
                   {socialMediaLinks[key]}
                   </span>
               </div>
