@@ -12,8 +12,8 @@ export default async function Home() {
     <div className="dark:bg-gray-800 dark:text-gray-300 space-y-10 pb-20">
       <Hero />
       <About />
-      <Projects projects={projects} />
       <Skills />
+      <Projects projects={projects} />
       <Contact />
     </div>
   )

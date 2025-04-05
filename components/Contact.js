@@ -20,14 +20,21 @@ function Contact() {
             {key === 'linkedin' && <Linkedin className='size-8' />}
             {key === 'email' && <Mail className='size-8' />}
             {key === 'phone' && (
-              <div className='flex items-center gap-x-2'>
-                <Phone />
-               
+              <div className='group flex relative'>
+                <Phone className='size-8 ' />
+                <span className="group-hover:opacity-100 transition-opacity  bg-sky-500 w-fit p-1 text-sm text-white rounded-md absolute left-full -right-full -translate-x-1/6 -translate-y-full opacity-0 m-4 mx-auto">
+                  {socialMediaLinks[key]}
+                  </span>
               </div>
             )}
           </Link>
         ))}
+
+
+
       </div>
+
+
     </div>
   )
 }
