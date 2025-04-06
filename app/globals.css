@@ -32,3 +32,8 @@
 .dark .bg-background {
   background-color: var(--background-dark);
 }
+
+.dark .text- {
+  color: var(--text-dark);
+  transition: color 0.3s ease-in-out;
+}

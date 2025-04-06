@@ -9,7 +9,7 @@ export default async function Home() {
   const projects = await getRepositories()
 
   return (
-    <div className="min-h-screen dark:bg-[url(/images/bg-2.avif)]   dark:text-gray-300 space-y-10 ">
+    <div className="min-h-screen dark:bg-gray-900   dark:text-gray-300 space-y-10 ">
      <div className='backdrop-blur-3xl'>
 
       <Hero />
