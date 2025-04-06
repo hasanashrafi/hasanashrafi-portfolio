@@ -13,14 +13,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"  className=" scroll-smooth">
-      <body className={`${inter.className} `}>
-        <div className="min-h-screen flex flex-col">
+    <html lang="en"  className="  ">
+      <body className={`${inter.className}  bg-[url(/images/bg.avif)]  bg-no-repeat bg-cover  `}>
+        <div className="min-h-screen flex flex-col ">
           <Navbar />
-          <main className="flex-grow">
+          <main className=" ">
             {children}
           </main>
-          <Footer />
+         <Footer/>
         </div>
       </body>
     </html>
