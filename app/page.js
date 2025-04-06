@@ -9,12 +9,15 @@ export default async function Home() {
   const projects = await getRepositories()
 
   return (
-    <div className="dark:bg-gray-800 dark:text-gray-300 space-y-10 pb-20">
+    <div className="min-h-screen dark:bg-[url(/images/bg-2.avif)]   dark:text-gray-300 space-y-10 ">
+     <div className='backdrop-blur-3xl'>
+
       <Hero />
       <About />
       <Skills />
       <Projects projects={projects} />
       <Contact />
+     </div> 
     </div>
   )
 }
