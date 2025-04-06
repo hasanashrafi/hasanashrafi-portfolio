@@ -9,7 +9,7 @@ function Hero() {
       <div className="max-w-3xl">
         <div>
           <p className="mb-10 dark:animate-none animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white dark:border-r-gray-800 pr-5 text-4xl  dark:text-gray-300 font-bold">
-            Hi, I'm <br/>
+            Hi, I am <br/>
             <span className=" bg-clip-text bg-gradient-to-r from-indigo-400  to-pink-400 text-transparent">Hasan Aashrafi</span>
           </p>
 

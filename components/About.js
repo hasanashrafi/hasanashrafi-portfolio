@@ -12,8 +12,8 @@ function About() {
           height={1000}
           className='size-72 mb-5 rounded-full shadow-lg object-cover'
           alt="profile"
-          
-          loading="lazy"
+          priority
+          loading="eager"
         />
 
         <div>

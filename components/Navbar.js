@@ -21,11 +21,15 @@ export default function Navbar() {
             href="https://hasanashrafi-portfolio.vercel.app/"
             className="dark:text-gray-300 text-xl font-bold"
           >
-            
-              <p>
-                <code>&lt;/&gt;</code>
-              </p>
-           
+            <Image
+              src="/logo.webp"
+              alt='logo'
+              width={100}
+              height={100}
+              priority
+              className='size-10 text-white'
+            />
+
           </Link>
 
           <button
