@@ -29,12 +29,7 @@ function Contact() {
             )}
           </Link>
         ))}
-
-
-
       </div>
-
-
     </div>
   )
 }
