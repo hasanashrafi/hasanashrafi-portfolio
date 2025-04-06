@@ -14,14 +14,18 @@ export default function Navbar() {
     document.body.classList.toggle('dark');
   };
   return (
-    <header className="  fixed top-0 left-0 right-0  z-50 bg-white/80 dark:bg-gray-800 backdrop-blur-md ">
-      <nav className="w-full mx-auto  px-5"> 
+    <header className=" p-3 fixed top-0 left-0 right-0  z-50 text-white dark:bg-inherit dark:border-b-2 border-b-gray-800  backdrop-blur-md ">
+      <nav className="w-full mx-auto  px-5">
         <div className="w-full flex items-center justify-between max-w-7xl mx-auto">
           <Link
-            href="/"
+            href="https://hasanashrafi-portfolio.vercel.app/"
             className="dark:text-gray-300 text-xl font-bold"
           >
-            <Image priority alt='logo' width={100} height={100} src="/logo.png" className='size-20' />
+            
+              <p>
+                <code>&lt;/&gt;</code>
+              </p>
+           
           </Link>
 
           <button
@@ -31,7 +35,7 @@ export default function Navbar() {
             {darkMode ? (
               <Sun className="text-yellow-500" size={24} />
             ) : (
-              <Moon className="text-gray-500" size={24} />
+              <Moon className="text-gray-50" size={24} />
             )}
           </button>
 
