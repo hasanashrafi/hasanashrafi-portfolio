@@ -4,7 +4,7 @@ import React from 'react'
 function About() {
   return (
     <div className=' container mx-auto px-6 py-12 '>
-      <p className='text-3xl font-bold mb-8 dark:text-gray-700'>About Me</p>
+      <p className='text-3xl font-bold mb-8 dark:text-gray-500'>About Me</p>
       <div className=' mx-auto flex flex-col md:flex-row items-center gap-x-3 '>
         <Image
           src="/profile.jpg"
