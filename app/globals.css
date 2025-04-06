@@ -13,13 +13,14 @@
   }
 
   body {
-    @apply bg-white text-gray-900;
+    @apply  text-white;
   }
 }
 
 @layer components {
   .container {
     @apply max-w-7xl mx-auto;
+    
   }
 }
 /* light mode */
