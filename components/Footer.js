@@ -3,7 +3,7 @@
 const Footer = () => {
  
   return (
-    <footer className="dark:bg-gray-800  text-white py-6 flex justify-center">
+    <footer className="bg-inherit py-6 flex justify-center">
      <p>Developed By HsN.DeV</p>
     </footer>
   );
