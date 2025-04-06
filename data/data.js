@@ -5,7 +5,7 @@
     { name: 'React', image: "/images/react.png" },
     { name: 'ReactQuery', image: "/images/reactquery.png" },
     { name: 'Redux-toolkit', image: "/images/redux.png" },
-    { name: 'Next.js', image: "/images/nextjs.png" },
+    { name: 'Next.js', image: "/images/nextjs.svg" },
     { name: 'TailwindCss', image: "/images/tailwind.png" },
     { name: 'API', image: "/images/api.png" },
     { name: 'RWD', image: "/images/responsive-design.png" },
