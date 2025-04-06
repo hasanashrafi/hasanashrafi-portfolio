@@ -5,15 +5,15 @@ function Hero() {
 
 
   return (
-    <div className="dark:bg-gray-800 container mx-auto px-6 pt-32 pb-12">
+    <div className=" container mx-auto px-6 pt-32 pb-12">
       <div className="max-w-3xl">
         <div>
-          <p className="mb-10 dark:animate-none animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white dark:border-r-gray-800 pr-5 text-4xl text-black dark:text-gray-300 font-bold">
-            Hi, Iam <br/>
-            <span className=" text-blue-500">Hasan Aashrafi</span>
+          <p className="mb-10 dark:animate-none animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white dark:border-r-gray-800 pr-5 text-4xl  dark:text-gray-300 font-bold">
+            Hi, I'm <br/>
+            <span className=" bg-clip-text bg-gradient-to-r from-indigo-400  to-pink-400 text-transparent">Hasan Aashrafi</span>
           </p>
 
-          <p className="  dark:text-gray-100 text-xl text-gray-600 mb-8">
+          <p className="  dark:text-gray-100 text-xl text-gray-50 mb-8">
             A passionate Frontend Developer crafting beautiful and functional web experiences.
             I specialize in React, Next.js, and modern web technologies.
           </p>
@@ -30,7 +30,7 @@ function Hero() {
               href="https://github.com/hasanashrafi"
 
               rel="noopener noreferrer"
-              className="dark:text-gray-400 text-gray-600 hover:text-blue-500 transition-colors"
+              className="dark:text-gray-400 text-gray-50 hover:text-blue-500 transition-colors"
             >
               <Github className="h-6 w-6" />
             </Link>
@@ -38,13 +38,13 @@ function Hero() {
               href="https://www.linkedin.com/in/hasan-ashrafi-7bb68bb4"
 
               rel="noopener noreferrer"
-              className="dark:text-gray-400 text-gray-600 hover:text-blue-500 transition-colors"
+              className="dark:text-gray-400 text-gray-50 hover:text-blue-500 transition-colors"
             >
               <Linkedin className=" h-6 w-6" />
             </Link>
             <Link
               href="mailto:hasanashrafi.dev@gmail.com"
-              className="dark:text-gray-400 text-gray-600 hover:text-blue-500 transition-colors"
+              className="dark:text-gray-400 text-gray-50 hover:text-blue-500 transition-colors"
             >
               <Mail className="h-6 w-6" />
             </Link>
