@@ -8,7 +8,7 @@ import Image from 'next/image'
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(() => {
     const storedDarkMode = localStorage.getItem('darkMode')
-    return storedDarkMode === 'true'
+    return storedDarkMode === 'true' ? true : false
   })
 
   useEffect(() => {
