@@ -13,7 +13,7 @@ function Hero() {
             Hi, I am <br />
             <span className=" bg-clip-text bg-gradient-to-r from-indigo-400  to-pink-400 text-transparent">Hasan Aashrafi</span>
           </p>
-          <Image src="/images/banner.webp" alt='banner' width={350} height={350} priority className='' />
+          <Image src="/images/banner.webp" alt='banner' width={350} height={350} priority className='animate-pulse' />
 
         </div>
         <p className="  dark:text-gray-100 text-xl text-gray-50 mb-8">
