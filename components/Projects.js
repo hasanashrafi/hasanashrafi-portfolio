@@ -12,8 +12,9 @@ export default function Projects({ projects }) {
         delay: 0.1,
         ease: 'easeInOut',
       }}
-      className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 items-center"
+      className="mx-auto max-w-7xl mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center"
     >
+         <p className="col-span-full text-3xl px-2 font-bold mb-8">Projects</p>
       {projects.map((project, index) => (
         <motion.div
           key={index}
@@ -24,7 +25,7 @@ export default function Projects({ projects }) {
             delay: index * 0.1,
             ease: 'easeInOut',
           }}
-          className=" dark:bg-gray-800  rounded-lg p-2"
+          className="   rounded-lg px-3"
         >
        <ProjectCard project={project} />
         </motion.div>
