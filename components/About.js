@@ -10,7 +10,7 @@ function About() {
           src="/profile.jpg"
           width={1000}
           height={1000}
-          className='size-72 mb-5 rounded-full shadow-lg object-cover'
+          className='dark:grayscale dark:hover:grayscale-0 ease-in-out transition-all duration-500 size-72 mb-5 rounded-full shadow-lg object-cover'
           alt="profile"
           priority
           loading="eager"
