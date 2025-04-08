@@ -1,9 +1,9 @@
 
 // components/Skills.js
+import SkillCard from '@/app/components/templates/SkillCard';
 import { frontendSkills } from '@/data/data';
 
 import React from 'react';
-import SkillCard from './templates/SkillCard';
 
 function Skills() {
  

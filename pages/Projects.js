@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
-import ProjectCard from './templates/ProjectCard';
+import ProjectCard from '../app/components/templates/ProjectCard';
 
 export default function Projects({ projects }) {
   return (
@@ -14,7 +14,7 @@ export default function Projects({ projects }) {
       }}
       className="mx-auto max-w-7xl mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center"
     >
-         <p className="col-span-full text-3xl px-2 font-bold mb-8">Projects</p>
+      <p className="col-span-full text-3xl px-2 font-bold mb-8">Projects</p>
       {projects.map((project, index) => (
         <motion.div
           key={index}
@@ -27,7 +27,7 @@ export default function Projects({ projects }) {
           }}
           className="   rounded-lg px-3"
         >
-       <ProjectCard project={project} />
+          <ProjectCard project={project} />
         </motion.div>
       ))}
     </motion.div>
