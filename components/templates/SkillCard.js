@@ -22,7 +22,7 @@ function SkillCard({ skill }) {
     >
       <div className=' flex flex-col items-center justify-center '>
         <li className=" flex justify-center   dark:text-gray-300  w-36 text-center  text-black rounded-full p-2 text-sm ">
-          <Image className='bg-white rounded-full p-0.5' width={50} height={50} src={skill.image} loading='lazy' alt={skill.name} />
+          <Image className='bg-white rounded-full p-1.5' width={50} height={50} src={skill.image} loading='lazy' alt={skill.name} />
         </li>
         <p className='text-center mx-auto'>
           {skill.name}
