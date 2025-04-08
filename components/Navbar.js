@@ -1,21 +1,34 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { Moon, Sun } from 'lucide-react'
-import Image from 'next/image'
-
+import { useState, useEffect, useMemo, useCallback } from 'react';
+import Link from 'next/link';
+import { Moon, Sun } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
-  const toggleDarkMode = () => {
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (isClient) {
+      setDarkMode(document.body.classList.contains('dark'));
+    }
+  }, [isClient]);
+
+  const toggleDarkMode = useCallback(() => {
     setDarkMode(!darkMode);
-    document.body.classList.toggle('dark');
-  };
+    if (isClient) {
+      document.body.classList.toggle('dark');
+    }
+  }, [darkMode, isClient]);
+
   return (
-    <header className=" p-3 fixed top-0 left-0 right-0  z-50 text-white dark:bg-inherit dark:border-b-2 border-b-gray-800  backdrop-blur-md ">
-      <nav className="w-full mx-auto  px-5">
+    <header className="p-3  text-white dark:bg-gray-900 dark:border-b-2 border-b-gray-800 backdrop-blur-3xl">
+      <nav className="w-full mx-auto px-5">
         <div className="w-full flex items-center justify-between max-w-7xl mx-auto">
           <Link
             href="https://hasanashrafi-portfolio.vercel.app/"
@@ -23,32 +36,21 @@ export default function Navbar() {
           >
             <Image
               src="/logo.webp"
-              alt='logo'
+              alt="Logo"
               width={100}
               height={100}
-              priority
-              className='size-10 text-white'
+              className='size-9'
+              onError={(event) => {
+                event.target.src = '/default-logo.webp';
+              }}
             />
-
           </Link>
 
-          <button
-            className="dark-mode-button"
-            onClick={toggleDarkMode}
-          >
-            {darkMode ? (
-              <Sun className="text-yellow-500" size={24} />
-            ) : (
-              <Moon className="text-gray-50" size={24} />
-            )}
+          <button className="dark-mode-button" onClick={toggleDarkMode}>
+            {darkMode ? <Sun className="text-yellow-500" size={24} /> : <Moon className="text-gray-50" size={24} />}
           </button>
-
-
-
-
-
         </div>
       </nav>
     </header>
-  )
+  );
 }
