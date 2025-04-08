@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en"  className="  ">
-      <body className={`${inter.className}  bg-[url(/images/bg.avif)]  bg-no-repeat bg-cover  `}>
+      <body className={`${inter.className}  bg-[url(/images/bg.avif)] backdrop-blur-3xl bg-no-repeat bg-cover  `}>
         <div className="min-h-screen flex flex-col ">
           <Navbar />
           <main className=" ">
