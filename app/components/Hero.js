@@ -112,7 +112,7 @@ function Hero() {
               width={350}
               height={350}
               priority
-              className='mx-auto'
+              className='mx-auto animate-pulse'
             />
           </motion.div>
         </div>
