@@ -47,7 +47,7 @@ export default function Projects({ projects }) {
         Projects
       </motion.h2>
 
-      {projects.map((project, index) => (
+      {projects && projects.map((project, index) => (
         <motion.div
           key={index}
           variants={itemVariants}
