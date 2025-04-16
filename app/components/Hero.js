@@ -94,7 +94,7 @@ function Hero() {
             </motion.p>
 
             <motion.p
-              className="dark:text-gray-400 text-xl text-gray-50 mb-8"
+              className="max-w-4xl dark:text-gray-400 text-xl text-gray-50 mb-8"
               variants={itemVariants}
             >
               A passionate Frontend Developer crafting beautiful and functional web experiences.
