@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import ProjectCard from '../app/components/templates/ProjectCard';
 
 export default function Projects({ projects }) {
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
