@@ -20,7 +20,7 @@ function SkillCard({ skill }) {
       }}
     >
       <div className='flex flex-col items-center justify-center'>
-        <div className="flex justify-center dark:text-gray-300 w-36 text-center text-black rounded-full p-2 text-sm">
+        <div className="flex justify-center dark:text-gray-300 w-28 text-center text-black rounded-full p-2 text-sm">
           <Image
             className='bg-white rounded-full p-1.5'
             width={50}

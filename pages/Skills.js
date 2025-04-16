@@ -11,7 +11,7 @@ function Skills() {
   return (
     <div id='skills' className="container mx-auto p-2 md:py-12 max-w-7xl ">
       <p className="text-3xl font-bold mb-8">Skills</p>
-      <ul className="list-none flex items-center flex-wrap gap-3 mt-2 md:justify-start justify-center ">
+      <ul className="list-none flex items-center gap-2 flex-wrap  md:justify-start justify-center ">
         {frontendSkills.map((skill, index) => (
           <SkillCard key={index} skill={skill} />
         ))}
