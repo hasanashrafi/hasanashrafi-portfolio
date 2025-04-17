@@ -112,7 +112,7 @@ export default function WelcomePage() {
   ];
 
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
+    <div className="relative min-h-screen bg-inherit overflow-hidden">
       {/* Animated background icons */}
       {icons.map((icon, index) => (
         <motion.div
@@ -141,7 +141,7 @@ export default function WelcomePage() {
       ))}
 
       {/* Welcome content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen">
+      <div className=" relative z-10 flex flex-col items-center justify-center min-h-screen">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}

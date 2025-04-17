@@ -13,8 +13,7 @@ import { getRepositories } from '@/lib/github';
 export default async function MainPage() {
     const projects = await getRepositories()
     return (
-        <div
-             >
+        <div >
             <Hero />
             <About />
             <Skills />
