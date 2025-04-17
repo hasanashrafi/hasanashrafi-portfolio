@@ -84,11 +84,11 @@ function Hero() {
         <div className='w-full md:flex md:flex-row flex flex-col-reverse items-center justify-between'>
           <motion.div className='' variants={itemVariants}>
             <motion.p
-              className="mb-10 dark:animate-none animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white dark:border-r-gray-800 pr-5 text-4xl dark:text-gray-400 font-bold"
+              className="mb-10 dark:animate-none animate-typing overflow-hidden whitespace-nowrap   pr-5 text-4xl dark:text-gray-500 font-bold"
               variants={itemVariants}
             >
               Hi, I am <br />
-              <span className="bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400 text-transparent">
+              <span className="bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400 dark:from-gray-400 dark:via-gray-600 dark:to-gray-400 text-transparent">
                 Hasan Aashrafi
               </span>
             </motion.p>
