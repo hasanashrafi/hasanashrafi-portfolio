@@ -13,7 +13,7 @@ import { getRepositories } from '@/lib/github';
 export default async function MainPage() {
     const projects = await getRepositories()
     return (
-        <div >
+        <div className='dark:bg-gray-900' >
             <Hero />
             <About />
             <Skills />
