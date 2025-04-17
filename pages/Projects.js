@@ -39,11 +39,11 @@ export default function Projects({ projects }) {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="mx-auto max-w-7xl mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center"
+      className="mx-auto max-w-7xl mt-5 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center"
     >
       <motion.h2
         variants={itemVariants}
-        className="col-span-full text-3xl px-2 font-bold mb-8"
+        className="col-span-full dark:text-gray-500 text-3xl px-2 font-bold mb-8"
       >
         Projects
       </motion.h2>
