@@ -1,27 +1,25 @@
 'use client'
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, memo } from 'react';
 import ProjectCard from '../app/components/templates/ProjectCard';
 
-export default function Projects({ projects }) {
-
+const Projects = memo(function Projects({ projects }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
         delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
@@ -32,6 +30,10 @@ export default function Projects({ projects }) {
       },
     },
   };
+
+  if (!projects?.length) {
+    return null;
+  }
 
   return (
     <motion.div
@@ -48,15 +50,18 @@ export default function Projects({ projects }) {
         Projects
       </motion.h2>
 
-      {projects && projects.map((project, index) => (
+      {projects.map((project, index) => (
         <motion.div
-          key={index}
+          key={project.id || index}
           variants={itemVariants}
           className="rounded-lg px-3"
+          layout
         >
           <ProjectCard project={project} />
         </motion.div>
       ))}
     </motion.div>
   );
-}
+});
+
+export default Projects;
