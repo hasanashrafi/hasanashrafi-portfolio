@@ -37,3 +37,6 @@
   color: var(--text-dark);
   transition: color 0.3s ease-in-out;
 }
+* {
+color: gray;
+}
