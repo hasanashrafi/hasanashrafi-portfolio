@@ -30,7 +30,7 @@ function SkillCard({ skill }) {
             alt={skill.name}
           />
         </div>
-        <p className='text-center mx-auto dark:text-gray-400'>
+        <p className='text-center mx-auto text-zinc-700 dark:text-gray-400'>
           {skill.name}
         </p>
       </div>

@@ -14,10 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="  ">
-      <body className={`${inter.className}  bg-[url(/images/bg.avif)] backdrop-blur-3xl bg-no-repeat bg-cover  `}>
+      <body className={`${inter.className}   `}>
         <div className="min-h-screen flex flex-col ">
           <Navbar />
-          <main className=" ">
+          <main className="">
             {children}
           </main>
           <Footer />

@@ -36,31 +36,31 @@ const Projects = memo(function Projects({ projects }) {
   }
 
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={containerVariants}
-      className="mx-auto max-w-7xl mt-5 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center"
-    >
-      <motion.h2
-        variants={itemVariants}
-        className="col-span-full dark:text-gray-500 text-3xl px-2 font-bold mb-8"
-      >
-        Projects
-      </motion.h2>
-
-      {projects.map((project, index) => (
+    <section className="w-full bg-gray-50 dark:bg-neutral-900 py-12 sm:py-16 px-2 sm:px-4 flex justify-center" id="projects">
+      <div className="max-w-6xl w-full flex flex-col items-center">
+        <div className="mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center border-2 border-black dark:border-white px-6 sm:px-8 py-2 rounded-lg bg-white dark:bg-black shadow text-gray-900 dark:text-gray-100">Portfolio</h2>
+        </div>
         <motion.div
-          key={project.id || index}
-          variants={itemVariants}
-          className="rounded-lg px-3"
-          layout
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
+          className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 w-full"
         >
-          <ProjectCard project={project} />
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id || index}
+              variants={itemVariants}
+              className="rounded-lg px-3"
+              layout
+            >
+              <ProjectCard project={project} />
+            </motion.div>
+          ))}
         </motion.div>
-      ))}
-    </motion.div>
+      </div>
+    </section>
   );
 });
 

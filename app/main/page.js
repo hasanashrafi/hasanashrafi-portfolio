@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import Hero from '../components/Hero';
+
 import About from '@/pages/About';
 import Skills from '@/pages/Skills';
 import Projects from '@/pages/Projects';
@@ -14,12 +14,10 @@ export default async function MainPage() {
     const projects = await getRepositories()
     return (
         <div className='dark:bg-gray-900' >
-            <Hero />
             <About />
             <Skills />
             <Projects projects={projects} />
             <Contact />
-
         </div>
     );
 } 

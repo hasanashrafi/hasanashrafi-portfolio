@@ -1,17 +1,18 @@
 import { Suspense } from 'react'
 import { getRepositories } from '@/lib/github'
-import Hero from './components/Hero'
+import Header from '../components/Header'
+import Hero from '../components/Hero'
 import About from '@/pages/About'
 import Skills from '@/pages/Skills'
 import Projects from '@/pages/Projects'
 import Contact from '@/pages/Contact'
+import Footer from '../components/Footer'
 
-// Loading component for Projects
 function ProjectsLoading() {
   return (
     <div className="min-h-screen dark:bg-gray-900 dark:text-gray-300 space-y-10">
       <div className='backdrop-blur-3xl'>
-        <Hero />
+       
         <About />
         <Skills />
         <div className="animate-pulse">
@@ -32,16 +33,20 @@ export default async function Home() {
   const projects = await getRepositories()
 
   return (
-    <div className="min-h-screen dark:bg-gray-900 dark:text-gray-300 space-y-10">
-      <div className='backdrop-blur-3xl'>
+    <div className="min-h-screen dark:bg-gray-900 dark:text-gray-300 flex flex-col">
+      <Header />
+      <main className="flex-1 ">
         <Hero />
-        <About />
-        <Skills />
-        <Suspense fallback={<ProjectsLoading />}>
-          <Projects projects={projects} />
-        </Suspense>
-        <Contact />
-      </div>
+        <section id="about"><About /></section>
+        <section id="skills"><Skills /></section>
+        <section id="projects">
+          <Suspense fallback={<ProjectsLoading />}>
+            <Projects projects={projects} />
+          </Suspense>
+        </section>
+        <section id="contact"><Contact /></section>
+      </main>
+      <Footer />
     </div>
   )
 }
