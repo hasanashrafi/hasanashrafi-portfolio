@@ -1,11 +1,20 @@
 'use client'
+import ProjectCard from '@/components/ProjectCard';
 import { motion, useInView } from 'framer-motion';
 import { useRef, memo } from 'react';
-import ProjectCard from '../app/components/templates/ProjectCard';
+import { useQuery } from '@tanstack/react-query';
+import { getRepositories } from '@/lib/github';
 
-const Projects = memo(function Projects({ projects }) {
+const Projects = memo(function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  const { data: projects, isLoading, isError } = useQuery({
+    queryKey: ['projects'],
+    queryFn: getRepositories,
+    staleTime: 1000 * 60 * 60, // 1 hour
+    refetchOnWindowFocus: false,
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -31,8 +40,30 @@ const Projects = memo(function Projects({ projects }) {
     },
   };
 
-  if (!projects?.length) {
-    return null;
+  if (isLoading) {
+    return (
+      <section className="w-full bg-gray-50 dark:bg-neutral-900 py-12 sm:py-16 px-2 sm:px-4 flex justify-center" id="projects">
+        <div className="max-w-6xl w-full flex flex-col items-center">
+          <div className="mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center border-2 border-black dark:border-white px-6 sm:px-8 py-2 rounded-lg bg-white dark:bg-black shadow text-gray-900 dark:text-gray-100">Portfolio</h2>
+          </div>
+          <div className="text-lg text-gray-700 dark:text-gray-300">Loading projects...</div>
+        </div>
+      </section>
+    );
+  }
+
+  if (isError || !projects?.length) {
+    return (
+      <section className="w-full bg-gray-50 dark:bg-neutral-900 py-12 sm:py-16 px-2 sm:px-4 flex justify-center" id="projects">
+        <div className="max-w-6xl w-full flex flex-col items-center">
+          <div className="mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center border-2 border-black dark:border-white px-6 sm:px-8 py-2 rounded-lg bg-white dark:bg-black shadow text-gray-900 dark:text-gray-100">Portfolio</h2>
+          </div>
+          <div className="text-lg text-red-600 dark:text-red-400">Failed to load projects.</div>
+        </div>
+      </section>
+    );
   }
 
   return (
