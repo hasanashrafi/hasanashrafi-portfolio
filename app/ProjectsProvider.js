@@ -15,7 +15,7 @@ export default function ProjectsProvider({ children }) {
         queryFn: getRepositories,
         staleTime: 1000 * 60 * 60,
     });
-
+    // console.log(projects)
 
     if (isError) {
         console.error('Error fetching projects:', error);
