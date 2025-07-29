@@ -7,17 +7,14 @@ function Hero() {
     return (
         <section className="relative max-w-7xl mx-auto min-h-[70vh] flex flex-col-reverse md:flex-row items-center justify-center overflow-hidden bg-white dark:bg-black transition-colors duration-500">
             {/* Black/White Accent Background */}
-            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none select-none">
-                <div className="hidden md:block absolute left-0 top-0 w-2/3 h-full bg-gradient-to-br from-gray-100 via-white to-transparent dark:from-gray-900 dark:via-black dark:to-transparent" style={{ clipPath: 'polygon(0 0, 100% 0, 80% 100%, 0% 100%)' }} />
-                <div className="hidden md:block absolute right-0 top-0 w-1/3 h-full bg-gradient-to-tl from-black/70 via-transparent to-transparent dark:from-white/10" style={{ clipPath: 'polygon(20% 0, 100% 0, 100% 100%, 0% 100%)' }} />
-            </div>
+            
             {/* Left: Info */}
-            <div className="relative z-10 flex-1 flex flex-col justify-center items-center md:items-start px-4 sm:px-8 md:px-12 max-w-full md:max-w-[600px] py-8 md:py-0">
+            <div className="relative z-10 flex-1 flex flex-col justify-center items-center md:items-start px-4 sm:px-8 md:px-12  py-8 md:py-0">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-black dark:text-white mb-2 text-center md:text-left leading-tight">
                     Hi, I am <span className="bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent dark:from-white dark:to-gray-300">Hasan Ashrafi</span>
                 </h1>
                 <div className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-center md:text-left">
-                    <span className="inline-block px-3 py-1 rounded-full bg-black text-white dark:bg-white dark:text-black shadow-md">
+                    <span className="inline-block px-3 py-1 rounded-xl bg-black text-white dark:bg-white dark:text-black shadow-md">
                         Front-end Developer
                     </span>
                 </div>
@@ -31,7 +28,7 @@ function Hero() {
                     </Link>
                     <Link href="https://www.linkedin.com/in/hasan-ashrafi-7bb68bb4" passHref legacyBehavior>
                         <a target="_blank" rel="noopener noreferrer" className="group hover:scale-110 transition-transform">
-                            <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 dark:border-gray-700 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black">
+                            <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-black shadow-lg border border-gray-200 dark:border-gray-700 group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black">
                                 <Linkedin className="size-7" />
                             </span>
                         </a>
@@ -53,7 +50,7 @@ function Hero() {
             {/* Right: Photo */}
             <div className="relative z-10 flex-1 flex items-center justify-center py-8 md:py-0">
                 <div className="relative w-52 h-52 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-black via-gray-700 to-white p-1 dark:from-white dark:via-gray-300 dark:to-black shadow-2xl">
-                    <Image src="/profile.jpg" alt="Profile" fill sizes="(max-width: 768px) 208px, 320px" className="rounded-full object-cover border-4 border-white dark:border-black" priority />
+                    <Image src="/profile.jpg" alt="Profile" fill sizes="(max-width: 768px) 208px, 320px" className="rounded-full object-cover border-4 border-white dark:border-black" />
                 </div>
             </div>
         </section>

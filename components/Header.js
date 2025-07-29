@@ -1,11 +1,39 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [theme, setTheme] = useState('light');
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+        // Check for saved theme preference or default to 'light'
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+        
+        // Apply theme to document
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, []);
+
+    const toggleTheme = () => {
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        if (newTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    };
 
     const navLinks = [
         { href: '#about', label: 'About' },
@@ -21,15 +49,31 @@ function Header() {
                     Hasan Ashrafi
                 </Link>
                 {/* Desktop Nav */}
-                <ul className="hidden md:flex space-x-8 text-lg font-medium">
-                    {navLinks.map((link) => (
-                        <li key={link.href}>
-                            <a href={link.href} className="hover:text-sky-500 transition">
-                                {link.label}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+                <div className="hidden md:flex items-center space-x-8">
+                    <ul className="flex space-x-8 text-lg font-medium">
+                        {navLinks.map((link) => (
+                            <li key={link.href}>
+                                <a href={link.href} className="hover:text-sky-500 transition">
+                                    {link.label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                    {/* Theme Toggle Button */}
+                    {mounted && (
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+                        >
+                            {theme === 'light' ? (
+                                <Moon className="size-6 text-gray-700 dark:text-gray-300" />
+                            ) : (
+                                <Sun className="size-6 text-gray-700 dark:text-gray-300" />
+                            )}
+                        </button>
+                    )}
+                </div>
                 {/* Hamburger for Mobile */}
                 <button
                     className="md:hidden text-gray-900 dark:text-white focus:outline-none"
@@ -62,6 +106,20 @@ function Header() {
                             </li>
                         ))}
                     </ul>
+                    {/* Mobile Theme Toggle */}
+                    {mounted && (
+                        <button
+                            onClick={toggleTheme}
+                            className="mt-8 p-3 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 transition-all"
+                            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+                        >
+                            {theme === 'light' ? (
+                                <Moon className="size-8 text-white" />
+                            ) : (
+                                <Sun className="size-8 text-white" />
+                            )}
+                        </button>
+                    )}
                 </div>
             )}
         </header>
